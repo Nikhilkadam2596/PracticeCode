@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sign Up!</h1>
+
+        <form action="" id="form" novalidate>
+
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" required minlength="3" maxlength="50">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email ID</label>
+                <input type="email" id="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password1">Password</label>
+                <input type="password" id="password1" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title = "At least 1 uppercase character, 1 lowecase character and 1 number." placeholder="Min. 8 character password.">
+            </div>
+
+            <div class="form-group">
+                <label for="password2">Confirm Password</label>
+                <input type="password" id="password2" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div class="message-container">
+            <h3 id="message">feel free to sign up</h3>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
